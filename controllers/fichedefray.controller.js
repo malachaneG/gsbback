@@ -9,12 +9,23 @@ const search = (request,response) => {
 }
 
 const searchAll = (request,response) => {
-    ficheModel.searchAll((err, result) => {
+    ficheModel.searchAll(request.params.id, (err, result) => {
         response.json({result})
     })
 }
 const searchFraisForfait = (request,response) => {
     ficheModel.searchFraisForfait((err, result) => {
+        response.json({result})
+    })
+}
+
+const searchLigneFraisForfait = (request, response) => {
+    ficheModel.searchLigneFraisForfait(request.params.id, request.params.mois,(err,result) => {
+        response.json({result})
+    })
+}
+const searchLigneFraisHorsForfait = (request, response) => {
+    ficheModel.searchLigneFraisHorsForfait(request.params.id, request.params.mois,(err,result) => {
         response.json({result})
     })
 }
@@ -91,6 +102,8 @@ module.exports = {
     search,
     searchAll,
     searchFraisForfait,
+    searchLigneFraisForfait,
+    searchLigneFraisHorsForfait,
     addFiche,
     addLigneFraisForfait,
     addLigneFraisHorsForfait,

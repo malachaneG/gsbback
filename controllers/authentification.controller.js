@@ -1,4 +1,4 @@
-const userModel = require('../models/user.model')
+/*const userModel = require('../models/user.model')
 const createAccessToken = require('../config/utils/token')
 
 const searchByLogin = (request, response) => {
@@ -27,4 +27,4 @@ const searchByLogin = (request, response) => {
 }
 module.exports = {
     searchByLogin
-}
+}*/

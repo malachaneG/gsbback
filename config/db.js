@@ -4,7 +4,7 @@ var connection = mysql.createConnection({
   port     : '35305',
   user     : 'gsbmalachane',//gsbmalachane / root
   password : 'gsbmalachaneSU2020',//gsbmalachaneSU2020 / root
-  database : 'gsbmalachane'//bdgsb
+  database : 'gsbmalachane'//gsb
 });
 
 module.exports = connection

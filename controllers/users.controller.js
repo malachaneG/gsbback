@@ -1,12 +1,6 @@
 const { response } = require('express')
 const userModel = require ('../models/user.model')
 
-const searchAll = (request,response) => {
-    userModel.searchAll((err, result) => {
-        if (err) response.json(err)
-        else response.json({result})
-    })
-}
 
 const addUser = (request, response) => {
     const user = {
@@ -54,7 +48,6 @@ const deleteUser = (request, response) => {
     
 }
 module.exports = {
-    searchAll,
     addUser,
     updateUser,
     deleteUser

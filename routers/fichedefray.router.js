@@ -5,7 +5,9 @@ let router = express()
 
 
 //Recupération données
-router.get('/', ficheController.searchAll)
+router.get('/lignefraisforfait/:id/:mois', ficheController.searchLigneFraisForfait)
+router.get('/lignefraishorsforfait/:id/:mois', ficheController.searchLigneFraisHorsForfait)
+router.get('/:id', ficheController.searchAll)
 router.get('/fraisforfait', ficheController.searchFraisForfait) 
 router.get('/:id/:mois', ficheController.search)
 

@@ -1,7 +1,8 @@
+const { response } = require("express")
 const express = require("express")
-const authentificationController = require('../controllers/authentification.controller')
+const authController = require('../controllers/auth.controller')
 let router = express()
 
-router.post('/', authentificationController.searchByLogin)
+router.post('/auth', authController.auth)
 
 module.exports = router 
